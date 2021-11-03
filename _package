@@ -3,11 +3,11 @@
 # INSTALL SCRIPTS - SET TO LOCAL BIN
 
 
-echo "Installing..."
+printf "Installing...\n"
 
 sudo cp dist/* /usr/local/bin
 
-sleep 3
+sleep 6
 
 
-echo "Done."
+printf "\nDone.\n"
