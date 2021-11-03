@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# SCRIPT FOR CHECKING YOUR ACADEMIC HISTORY - PERFOMANCE - GRADING...
+
 read -p "Do you remember your project codename? " PJCODENAME
 
 if [ $PJCODENAME  == "yes" ] || [ $PJCODENAME == "y" ]; then

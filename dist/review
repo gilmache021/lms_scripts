@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# SCRIPT FOR REVIEWING STUDENTS ON LMS
+
 printf "Fetching invited reviews...\n"
 wtc-lms reviews | grep "Invited"
 printf "\nDone.\n"

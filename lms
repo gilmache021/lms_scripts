@@ -1,7 +1,0 @@
-#!/usr/bin/expect
-
-spawn wtc-lms login
-
-expect -exact "password:" { send "GRANT-ssecca2--wethinkcode>>\r" }
-
-expect eof

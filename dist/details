@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# SCRIPT FOR GETTING STUDENT'S DETAILS ON LMS
+
 read -p "Details for (Graded) or (Assigned)? " WHICHREVIEWS
 
 if [ $WHICHREVIEWS == "Graded" ]; then

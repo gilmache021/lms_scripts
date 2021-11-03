@@ -1,7 +1,0 @@
-#!/usr/bin/expect
-
-spawn sudo service bluetooth stop
-
-expect -exact "password for lifeoncode:" { send "GRANT-ssecca2--lifeoncode>>\r" }
-
-expect eof

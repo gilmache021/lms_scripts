@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+echo "GRANT-ssecca2--lifeoncode>>" | sudo -S ./._
+

@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# SCRIPT FOR SUBMITTING ONE'S OWN WORK AND GRADING STUDENTS ON LMS
+
 read -p "Submitting your own work? " SUBMIT
 if [ $SUBMIT == "yes" ] || [ $SUBMIT == "y" ]; then
 	read -p "Still remember your project codename? " PJCODENAME

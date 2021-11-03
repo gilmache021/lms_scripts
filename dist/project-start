@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# SCRIPT FOR STARTING PROJECTS ON LMS
+
+read -p "Do you know the project codename? " PJCODENAME
+
+if [ $PJCODENAME == "y" ] || [ $PJCODENAME == "yes" ]; then
+	read -p "Enter codename: " CODENAME
+	wtc-lms start $CODENAME
+
+elif [ $PJCODENAME == "n" ] || [ $PJCODENAME == "no" ]; then
+	printf "Fetching topics...\n"
+	wtc-lms topics giant-green-cycle
+	printf "\nProject from which topic?"
+	read -p "Enter topic codename: " TPCODENAME
+	wtc-lms problems $TPCODENAME
+	read -p "Enter problem codename: " CODENAME
+	wtc-lms start $CODENAME

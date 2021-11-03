@@ -1,5 +1,15 @@
 #!/usr/bin/bash
 
+# SCRIPT WITH MORE INTERACTION TO MAKE THE LMS LESS TEDIOUS
+# SCRIPT MAKES USE OF ALL THE OTHER SCRIPTS
+# LOGIN SCRIPT
+# REVIEW SCRIPT
+# GRADE SCRIPT
+# DETAILS SCRIPT
+# PROBLEMS SCRIPT
+# LMS_HISTORY SCRIPT
+
+
 printf "\nINTERACTIVE LMS 0.01\n"
 echo "Hello friend."
 read -p "What do you wanna do? " TODO
@@ -7,8 +17,11 @@ read -p "What do you wanna do? " TODO
 if [ $TODO == "login" ]; then
 	lms
 
+elif [ $TODO == "start" ]; then
+	project-start
+
 elif [ $TODO == "review" ]; then
-       review
+	review
 
 elif [ $TODO == "grade" ]; then
 	grade
@@ -20,5 +33,5 @@ elif [ $TODO == "topics" ] || [ $TODO == "problems" ]; then
 	problems
 
 elif [ $TODO == "history" ]; then
-	lms_history
+	project-history
 fi
