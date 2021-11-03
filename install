@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-echo "{your sudo password here}" | sudo -S ./._
+echo "{your sudo password here}" | sudo -S ./_package
 
