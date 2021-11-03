@@ -4,12 +4,11 @@
 # MAKES USE OF THE (EXPECT) LOGIN SCRIPT
 # SCRIPT WILL KEEP LOGGING USER IN EVERY 4 HOURS WHILE PC TURNED ON AND SCRIPT IS RUNNING
 
+printf "\nHello friend.\n"
+
 while true; do
 	echo ""
-	echo "hello friend."
-	echo""
 	lms
-	echo ""
 	sleep 14400
-	echo "token expired... logged out."
+	printf "\ntoken expired... logged out.\n"
 done

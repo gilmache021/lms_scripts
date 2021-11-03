@@ -12,5 +12,5 @@ printf "Fetching problems under $TOPIC...\n"
 
 wtc-lms problems $TOPIC
 
-printf "\nDone."
+printf "\nDone.\n"
 

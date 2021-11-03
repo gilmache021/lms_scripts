@@ -4,14 +4,14 @@
 
 read -p "Details for (Graded) or (Assigned)? " WHICHREVIEWS
 
-if [ $WHICHREVIEWS == "Graded" ]; then
+if [ $WHICHREVIEWS == "Graded" ] || [ $WHICHREVIEWS == "graded" ]; then
 	echo "Fetching graded reviews..."
 	wtc-lms reviews | grep "Graded"
 	echo ""
 	read -p "Whose details to show? (codename): " CODENAME
 	wtc-lms review_details $CODENAME
 
-elif [ $WHICHREVIEWS == "Assigned" ]; then
+elif [ $WHICHREVIEWS == "Assigned" ] || [ $WHICHREVIEWS == "assigned" ]; then
 	echo "Fetching assigned reviews..."
 	wtc-lms reviews | grep "Assigned"
 	echo ""

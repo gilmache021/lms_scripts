@@ -12,7 +12,7 @@ if [ $SUBMIT == "yes" ] || [ $SUBMIT == "y" ]; then
 		wtc-lms grade $CODENAME
 		sleep 5
 		wtc-lms history $CODENAME
-		printf "\nDone."
+		printf "\nDone.\n"
 	
 	elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ]; then
 		printf "Fetching topics\n"
@@ -26,7 +26,7 @@ if [ $SUBMIT == "yes" ] || [ $SUBMIT == "y" ]; then
 		wtc-lms grade $PROBLEM
 		sleep 5
 		wtc-lms history $PROBLEM
-		print "\nDone."
+		print "\nDone.\n"
 	
 	else
 		echo "Sorry couldn't understand that..."
@@ -47,7 +47,7 @@ elif [ $SUBMIT == "no" ] || [ $SUBMIT == "n" ]; then
 	wtc-lms grade_review $CODENAME $LEVEL
 
 	wtc-lms review_details $CODENAME
-	printf "\nDone."
+	printf "\nDone.\n"
 else
 	echo "Sorry couldn't understand that...."
 

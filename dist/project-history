@@ -7,7 +7,7 @@ read -p "Do you remember your project codename? " PJCODENAME
 if [ $PJCODENAME  == "yes" ] || [ $PJCODENAME == "y" ]; then
 	read -p "Enter codename: " CODENAME
 	wtc-lms history $CODENAME
-	printf "\nDone."
+	printf "\nDone.\n"
 
 elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ]; then
 	printf "Fetching topics...\n"
@@ -18,7 +18,7 @@ elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ]; then
 	wtc-lms problems $TOPIC
 	read -p "Which problem? " PROBLEM
 	wtc-lms history $PROBLEM
-	printf "\nDone."
+	printf "\nDone.\n"
 
 else
 	echo "Sorry couldn't understant that..."
