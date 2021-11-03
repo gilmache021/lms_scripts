@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+read -p "Details for (Graded) or (Assigned)? " WHICHREVIEWS
+
+if [ $WHICHREVIEWS == "Graded" ]; then
+	echo "Fetching graded reviews..."
+	wtc-lms reviews | grep "Graded"
+	echo ""
+	read -p "Whose details to show? (codename): " CODENAME
+	wtc-lms review_details $CODENAME
+
+elif [ $WHICHREVIEWS == "Assigned" ]; then
+	echo "Fetching assigned reviews..."
+	wtc-lms reviews | grep "Assigned"
+	echo ""
+	read -p "Whose details to show? (codename): " CODENAME
+	wtc-lms review_details $CODENAME
+
+else
+	echo "Sorry I counldn't understand that..."
+
+fi

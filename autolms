@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+while true; do
+	echo ""
+	echo "hello friend."
+	echo""
+	lms
+	echo ""
+	sleep 14400
+	echo "token expired... logged out."
+done

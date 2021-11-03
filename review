@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+printf "Fetching invited reviews...\n"
+wtc-lms reviews | grep "Invited"
+printf "\nDone.\n"
+
+read -p "Accept codename: " CODENAME
+wtc-lms accept $CODENAME
+printf "\nYou're assigned to $CODENAME. Showing details...\n"
+
+sleep 5
+wtc-lms review_details $CODENAME
+printf "\nReview accepted. Clone repo above."
+
+
+

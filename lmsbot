@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+printf "\nINTERACTIVE LMS 0.01\n"
+echo "Hello friend."
+read -p "What do you wanna do? " TODO
+
+if [ $TODO == "login" ]; then
+	lms
+
+elif [ $TODO == "review" ]; then
+       review
+
+elif [ $TODO == "grade" ]; then
+	grade
+
+elif [ $TODO == "details" ]; then
+	details
+
+elif [ $TODO == "topics" ] || [ $TODO == "problems" ]; then
+	problems
+
+elif [ $TODO == "history" ]; then
+	lms_history
+fi

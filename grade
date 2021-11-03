@@ -1,0 +1,56 @@
+#!/usr/bin/bash
+
+read -p "Submitting your own work? " SUBMIT
+if [ $SUBMIT == "yes" ] || [ $SUBMIT == "y" ]; then
+	read -p "Still remember your project codename? " PJCODENAME
+	
+	if [ $PJCODENAME == "yes" ] || [ $PJCODENAME == "y" ]; then
+		read -p "Enter codename: " CODENAME
+		printf "\nSubmitting $CODENAME..."
+		wtc-lms grade $CODENAME
+		sleep 5
+		wtc-lms history $CODENAME
+		printf "\nDone."
+	
+	elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ]; then
+		printf "Fetching topics\n"
+		wtc-lms topics giant-green-cycle
+		echo ""
+		read -p "Which topic? " TOPIC
+		printf "Fetching problems in $TOPIC...\n"
+		wtc-lms problems $TOPIC
+		read -p "Problem codename: " PROBLEM
+		printf "\nSubmitting $PROBLEM..."
+		wtc-lms grade $PROBLEM
+		sleep 5
+		wtc-lms history $PROBLEM
+		print "\nDone."
+	
+	else
+		echo "Sorry couldn't understand that..."
+	fi
+
+
+elif [ $SUBMIT == "no" ] || [ $SUBMIT == "n" ]; then
+	printf "Fetching assigned reviews\n"
+	wtc-lms reviews | grep "Assigned"
+
+	printf "\nDone."
+	read -p "Grade codename: " CODENAME
+
+	read -p "Comment: " COMMENT
+	wtc-lms add_comment $CODENAME "$COMMENT"
+
+	read -p "Grade level: " LEVEL
+	wtc-lms grade_review $CODENAME $LEVEL
+
+	wtc-lms review_details $CODENAME
+	printf "\nDone."
+else
+	echo "Sorry couldn't understand that...."
+
+fi
+
+
+
+
