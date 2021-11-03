@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-echo "GRANT-ssecca2--lifeoncode>>" | sudo -S ./._
+echo "{your sudo password here}" | sudo -S ./._
 
