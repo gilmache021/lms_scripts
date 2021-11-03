@@ -11,4 +11,4 @@ sudo cp dist/* /usr/local/bin
 sleep 2
 
 cd && rm -rf lms_scripts
-printf "\nDone."
+printf "\nDone.\n"
