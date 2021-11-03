@@ -1,4 +1,14 @@
 #!/usr/bin/bash
 
-echo "your sudo password here" | sudo -S ./_package
+# THIS SCRIPT "INSTALLS" EVERYTHING NEEDED
+
+read -p "Enter password (your computer login password): " SUDOPASS
+
+read -p "Enter keycloak password (your wtc-lms login password): " LMSPASS
+
+sed -i "s/your keycloak password here/$LMSPASS/" dist/lms
+
+sleep 2
+
+echo "$SUDOPASS" | sudo -S ./_package
 
