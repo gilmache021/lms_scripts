@@ -15,5 +15,6 @@ Open your terminal and run the following commands:
 3.  Enter passwords at prompt
 
 
-
 All should be good to go after this.
+
+4.  Run: lmsbot
