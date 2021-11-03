@@ -2,9 +2,14 @@
 
 # INSTALL SCRIPTS - SET TO LOCAL BIN
 
+#sudo rm /usr/local/bin/autolms && sudo rm /usr/local/bin/details && sudo rm /usr/local/bin/grade && sudo rm /usr/local/bin/lms
+#sudo rm /usr/local/bin/lmsbot
+
+echo "Installing..."
+
 sudo cp dist/* /usr/local/bin
 
-sleep 2
+sleep 5
 
 
 echo "Done."

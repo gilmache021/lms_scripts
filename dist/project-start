@@ -16,3 +16,8 @@ elif [ $PJCODENAME == "n" ] || [ $PJCODENAME == "no" ]; then
 	wtc-lms problems $TPCODENAME
 	read -p "Enter problem codename: " CODENAME
 	wtc-lms start $CODENAME
+
+else
+	echo "Sorry I couldn't understand that..."
+
+fi
