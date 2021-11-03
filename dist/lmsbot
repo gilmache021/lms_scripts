@@ -11,6 +11,7 @@
 
 
 printf "\nINTERACTIVE LMS 0.01\n"
+echo ""
 echo "Hello friend."
 read -p "What do you wanna do? " TODO
 

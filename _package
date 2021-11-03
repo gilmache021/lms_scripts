@@ -2,13 +2,9 @@
 
 # INSTALL SCRIPTS - SET TO LOCAL BIN
 
-sudo cp lmsbot /usr/local/bin
-
-sudo cp autolms /usr/local/bin
-
 sudo cp dist/* /usr/local/bin
 
 sleep 2
 
-cd && rm -rf lms_scripts
-printf "\nDone.\n"
+
+echo "Done."
