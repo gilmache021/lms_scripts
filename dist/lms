@@ -4,6 +4,6 @@
 
 spawn wtc-lms login
 
-expect -exact "password:" { send "{keycloak password here}\r" }
+expect -exact "password:" { send "keycloak password here\r" }
 
 expect eof
