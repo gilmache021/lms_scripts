@@ -3,11 +3,15 @@
 # INSTALL SCRIPTS - SET TO LOCAL BIN
 
 
-printf "Installing...\n"
+printf "\nInstalling...\n"
 
 sudo cp dist/* /usr/local/bin
 
 sleep 6
+
+sudo apt install expect -y
+
+sleep 3
 
 
 printf "\nDone.\n"

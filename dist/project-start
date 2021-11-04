@@ -8,6 +8,27 @@ if [ $PJCODENAME == "y" ] || [ $PJCODENAME == "yes" ]; then
 	read -p "Enter codename: " CODENAME
 	wtc-lms start $CODENAME
 
+	read -p "Project started. wanna clone the repo? " CLONE
+
+#	if [ $CLONE == "yes" ] || [ $CLONE == "y" ]; then
+#		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
+#		sleep 3
+
+#		sed -i "s/Git Url:/git clone/" repo
+#		chmod +x repo
+#		./repo
+
+#		sleep 5
+#		rm repo
+
+#	elif [ $CLONE == "no" ] || [ $CLONE == "n" ]; then
+#		printf "\nOkay...\n"
+#	else
+#		echo "Sorry I couldn't understand that..."
+
+#	fi
+
+
 elif [ $PJCODENAME == "n" ] || [ $PJCODENAME == "no" ]; then
 	printf "Fetching topics...\n"
 	wtc-lms topics giant-green-cycle

@@ -10,7 +10,7 @@
 # LMS_HISTORY SCRIPT
 
 
-printf "\nINTERACTIVE LMS 0.03\n"
+printf "\nINTERACTIVE LMS 0.04\n"
 echo ""
 echo "Hello friend."
 read -p "What do you wanna do? " TODO
