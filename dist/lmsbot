@@ -9,33 +9,80 @@
 # PROBLEMS SCRIPT
 # LMS_HISTORY SCRIPT
 
+VERSION=0.05
 
-printf "\nINTERACTIVE LMS 0.04\n"
+printf "\nINTERACTIVE LMS $VERSION\n"
 echo ""
 echo "Hello friend."
-read -p "What do you wanna do? " TODO
 
-if [ $TODO == "login" ]; then
-	lms
+while true; do
 
-elif [ $TODO == "start" ]; then
-	project-start
+	read -p "What do you wanna do?: " TODO
 
-elif [ $TODO == "review" ]; then
-	review
+	if [ $TODO == "exit" ] || [ $TODO == "Exit" ] || [ $TODO == "EXIT" ]; then
+		echo "Closing bot..."
+		sleep 3
+		break
 
-elif [ $TODO == "grade" ]; then
-	grade
+	elif [ $TODO == "login" ] || [ $TODO == "Login" ] || [ $TODO == "LOGIN" ]; then
+		lms
 
-elif [ $TODO == "details" ]; then
-	details
+	elif [ $TODO == "start" ] || [ $TODO == "Start" ] || [ $TODO == "START" ]; then
+		project-start
 
-elif [ $TODO == "topics" ] || [ $TODO == "problems" ]; then
-	problems
+	elif [ $TODO == "submit" ] || [ $TODO == "Submit" ] || [ $TODO == "SUBMIT" ]; then
+		submit
 
-elif [ $TODO == "history" ]; then
-	project-history
+	elif [ $TODO == "review" ] || [ $TODO == "Review" ] || [ $TODO == "REVIEW" ]; then
+		review
 
-elif [ $TODO == "help" ]; then
-	printf "\nHere are some helpful commands:\n"
-fi
+	elif [ $TODO == "grade" ] || [ $TODO == "Grade" ] || [ $TODO == "GRADE" ]; then
+		grade
+
+	elif [ $TODO == "details" ] || [ $TODO == "Details" ] || [ $TODO == "DETAILS" ] ; then
+		details
+
+	elif [ $TODO == "topics" ] || [ $TODO == "Topics" ] || [ $TODO == "TOPICS" ] || [ $TODO == "problems" ] || [ $TODO == "Problems" ] || [ $TODO == "PROBLEMS" ]; then
+		problems
+
+	elif [ $TODO == "history" ] || [ $TODO == "History" ] || [ $TODO == "HISTORY" ]; then
+		project-history
+
+	elif [ $TODO == "help" ] || [ $TODO == "Help" ] || [ $TODO == "HELP" ]; then
+		printf "\nHere's some helpful answers you can give to (what do you wanna do)...\n\n"
+		echo ""
+
+		echo "login     --  to login to wtc-lms"
+		echo "start     --  to start a project"
+		echo "submit    --  to submit your work for grading"
+		echo "review    --  to do reviews"
+		echo "grade     --  to grade a student after reviewing"
+		echo "details   --  to show review details"
+		echo "problems  --  to show current topics and projects"
+		echo "history   --  to see grade results for previous projects"
+		echo "exit      --  to exit - stop using the bot"
+		echo "help      --  to show helpful commands"
+		echo ""
+		echo ""
+		echo ""
+
+	else
+		printf "\nHere's some helpful answers you can give to (what do you wanna do)...\n\n"
+		echo ""
+		echo "login     --  to login to wtc-lms"
+		echo "start     --  to start a project"
+		echo "submit    --  to submit your work for grading"
+		echo "review    --  to do reviews"
+		echo "grade     --  to grade a student after reviewing"
+		echo "details   --  to show review details"
+		echo "problems  --  to show current topics and projects"
+		echo "history   --  to see grade results for previous projects"
+		echo "exit      --  to exit - stop using the bot"
+		echo "help      --  to show helpful commands"
+		echo ""
+		echo ""
+		echo ""
+
+	fi
+
+done

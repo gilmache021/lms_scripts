@@ -7,11 +7,10 @@ printf "\nInstalling...\n"
 
 sudo cp dist/* /usr/local/bin
 
-sleep 6
+sleep 8
 
 sudo apt install expect -y
 
-sleep 3
-
+sleep 2
 
 printf "\nDone.\n"

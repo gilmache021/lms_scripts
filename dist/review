@@ -18,7 +18,7 @@ echo ""
 
 read -p "Review accepted. wanna clone the repo? " CLONE
 
-if [ $CLONE == "yes" ] || [ $CLONE == "y" ]; then
+if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
 	wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
 	sleep 3
 	
@@ -29,11 +29,10 @@ if [ $CLONE == "yes" ] || [ $CLONE == "y" ]; then
 	sleep 5
 	rm repo
 
-elif [ $CLONE == "no" ] || [ $CLONE == "n" ]; then
+elif [ $CLONE == "no" ] || [ $CLONE == "n" ] || [ $CLONE == "NO" ] || [ $CLONE == "N" ] || [ $CLONE == "No" ]; then
 	printf "\nOkay...\n"
 else
 	echo "Sorry I couldn't understand that..."
-
 fi
 
 

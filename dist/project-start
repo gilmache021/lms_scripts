@@ -8,28 +8,28 @@ if [ $PJCODENAME == "y" ] || [ $PJCODENAME == "yes" ]; then
 	read -p "Enter codename: " CODENAME
 	wtc-lms start $CODENAME
 
-	read -p "Project started. wanna clone the repo? " CLONE
+	read -p "Project started. wanna clone your repo? " CLONE
 
-#	if [ $CLONE == "yes" ] || [ $CLONE == "y" ]; then
-#		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
-#		sleep 3
+	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
+		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
+		sleep 1
+		sed -i "s/Git Url:/git clone/" repo
+		sleep 1
+		chmod +x repo
+		./repo
 
-#		sed -i "s/Git Url:/git clone/" repo
-#		chmod +x repo
-#		./repo
+		sleep 3
+		rm repo
+		printf "\nDone. Lets write some code!\n"
 
-#		sleep 5
-#		rm repo
-
-#	elif [ $CLONE == "no" ] || [ $CLONE == "n" ]; then
-#		printf "\nOkay...\n"
-#	else
-#		echo "Sorry I couldn't understand that..."
-
-#	fi
+	elif [ $CLONE == "no" ] || [ $CLONE == "n" ] || [ $CLONE == "NO" ] || [ $CLONE == "N" ] || [ $CLONE == "No" ]; then
+		printf "\nOkay...\n"
+	else
+		echo "Sorry I couldn't understand that..."
+	fi
 
 
-elif [ $PJCODENAME == "n" ] || [ $PJCODENAME == "no" ]; then
+elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ] || [ $PJCODENAME == "NO" ] || [ $PJCODENAME == "N" ] || [ $PJCODENAME == "No" ]; then
 	printf "Fetching topics...\n"
 	wtc-lms topics giant-green-cycle
 	printf "\nProject from which topic?"
@@ -38,7 +38,26 @@ elif [ $PJCODENAME == "n" ] || [ $PJCODENAME == "no" ]; then
 	read -p "Enter problem codename: " CODENAME
 	wtc-lms start $CODENAME
 
+	read -p "Project started. wanna clone your repo? " CLONE
+
+	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
+		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
+		sleep 1
+		sed -i "s/Git Url:/git clone/" repo
+		sleep 1
+		chmod +x repo
+		./repo
+
+		sleep 3
+		rm repo
+		printf "\nDone. Lets write some code!\n"
+
+	elif [ $CLONE == "no" ] || [ $CLONE == "n" ] || [ $CLONE == "NO" ] || [ $CLONE == "N" ] || [ $CLONE == "No" ]; then
+		printf "\nOkay...\n"
+	else
+		echo "Sorry I couldn't understand that..."
+	fi
+
 else
 	echo "Sorry I couldn't understand that..."
-
 fi
