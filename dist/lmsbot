@@ -35,4 +35,7 @@ elif [ $TODO == "topics" ] || [ $TODO == "problems" ]; then
 
 elif [ $TODO == "history" ]; then
 	project-history
+
+elif [ $TODO == "help" ]; then
+	printf "\nHere are some helpful commands:\n"
 fi
