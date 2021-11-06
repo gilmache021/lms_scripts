@@ -9,6 +9,7 @@ sudo cp dist/* /usr/local/bin
 
 sleep 8
 
+sudo apt update
 sudo apt install expect -y
 
 sleep 2

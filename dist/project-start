@@ -11,9 +11,7 @@ if [ $PJCODENAME == "y" ] || [ $PJCODENAME == "yes" ]; then
 	read -p "Project started. wanna clone your repo? " CLONE
 
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
-		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
-		sleep 1
-		sed -i "s/Git Url:/git clone/" repo
+		wtc-lms start $CODENAME | grep "git@gitlab" > repo
 		sleep 1
 		chmod +x repo
 		./repo
@@ -41,9 +39,7 @@ elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ] || [ $PJCODENAME == "NO" 
 	read -p "Project started. wanna clone your repo? " CLONE
 
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
-		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
-		sleep 1
-		sed -i "s/Git Url:/git clone/" repo
+		wtc-lms start $CODENAME | grep "git@gitlab" > repo
 		sleep 1
 		chmod +x repo
 		./repo
