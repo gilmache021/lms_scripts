@@ -11,7 +11,7 @@ if [ $WHICHREVIEWS == "Graded" ] || [ $WHICHREVIEWS == "graded" ] || [ $WHICHREV
 	read -p "Whose details to show? (codename): " CODENAME
 	wtc-lms review_details $CODENAME
 
-	read -p "\nDo you wanna clone their work? " CLONE
+	read -p "\nDo you wanna clone their work? " CLONEc
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
 		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
 		sleep 1
