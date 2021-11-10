@@ -16,7 +16,7 @@ if [ $WHICHREVIEWS == "Graded" ] || [ $WHICHREVIEWS == "graded" ] || [ $WHICHREV
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
 		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
 		sleep 1
-		sed i "s/Git Url/git clone/" repo
+		sed -i "s/Git Url/git clone/" repo
 		sleep 1
 		chmod +x repo
 		./repo
@@ -37,7 +37,7 @@ elif [ $WHICHREVIEWS == "Assigned" ] || [ $WHICHREVIEWS == "assigned" ] || [ $WH
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
 		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
 		sleep 1
-		sed i "s/Git Url/git clone/" repo
+		sed -i "s/Git Url/git clone/" repo
 		sleep 1
 		chmod +x repo
 		./repo
