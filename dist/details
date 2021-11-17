@@ -33,7 +33,7 @@ elif [ $WHICHREVIEWS == "Assigned" ] || [ $WHICHREVIEWS == "assigned" ] || [ $WH
 	read -p "Whose details to show? (codename): " CODENAME
 	wtc-lms review_details $CODENAME
 
-	printf"Do you wanna clone their work? " CLONE
+	read -p "Do you wanna clone their work? " CLONE
 	if [ $CLONE == "yes" ] || [ $CLONE == "y" ] || [ $CLONE == "YES" ] || [ $CLONE == "Y" ] || [ $CLONE == "Yes" ]; then
 		wtc-lms review_details $CODENAME | grep "git@gitlab" > repo
 		sleep 1
