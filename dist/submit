@@ -16,14 +16,14 @@ elif [ $PJCODENAME == "no" ] || [ $PJCODENAME == "n" ] || [ $PJCODENAME == "NO" 
     printf "Fetching topics...\n"
     wtc-lms topics giant-green-cycle
     echo ""
-    read -p "Which topic? " TOPIC
+    read -p "Which topic? " TOPIC2
     wtc-lms problems $TOPIC
     read -p "Problem codename: " PROBLEM
     printf "\nSubmitting $PROBLEM..."
     wtc-lms grade $PROBLEM
     sleep 5
     wtc-lms history $PROBLEM
-    print "\nDone.\n"
+    printf "\nDone.\n"
 
 else
     echo "Sorry couldn't understand that..."
