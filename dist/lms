@@ -1,9 +1,0 @@
-#!/usr/bin/expect
-
-# LMS LOGIN SCRIPT
-
-spawn wtc-lms login
-
-expect -exact "password:" { send "your keycloak password here\r" }
-
-expect eof
