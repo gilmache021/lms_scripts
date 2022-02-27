@@ -6,12 +6,12 @@
 printf "\nInstalling...\n"
 
 sudo cp dist/* /usr/local/bin
-
-sleep 8
+sleep 3
 
 sudo apt update
 sudo apt install expect -y
 
-sleep 2
+sleep 3
 
 printf "\nDone.\n"
+printf "type 'lmsbot' and [ENTER]\n"
