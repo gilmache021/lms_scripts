@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 print('''
     \nHERE'S SOME ANSWERS YOU CAN GIVE TO (what do you wanna do):\n
 

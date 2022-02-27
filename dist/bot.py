@@ -21,7 +21,7 @@ if len(argv) == 2:
         exit()
 
     elif argv[1] == '-h' or argv[1] == '-H' or argv[1] == '--help':
-        os.system('python3 help_commands.py')
+        os.system('help_commands.py')
         exit()
 
 
@@ -38,7 +38,7 @@ def execute_command(command):
     global valid_commands
     while True:
         if command not in valid_commands:
-            os.system('python3 help_commands.py')
+            os.system('help_commands.py')
             return get_command()
 
         elif command == 'exit':
@@ -49,7 +49,7 @@ def execute_command(command):
             get_command()
 
         elif command == 'help':
-            os.system('python3 help_commands.py')
+            os.system('help_commands.py')
             get_command()
 
         elif command == 'version':
