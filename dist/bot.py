@@ -9,7 +9,7 @@ from time import sleep
 from sqlalchemy import true
 
 version = '0.5'
-valid_commands = ['credits', 'help', 'version', 'help', 'exit', 'login', 'submit', 'review', 'details', 'grade', 'history']
+valid_commands = ['credits', 'help', 'version', 'help', 'exit', 'config', 'login', 'submit', 'review', 'details', 'grade', 'history']
 
 if len(argv) == 2:
     if argv[1] == '-v' or argv[1] == '-V' or argv[1] == '--version':
@@ -38,6 +38,7 @@ def execute_command(command):
     global valid_commands
     while True:
         if command not in valid_commands:
+            os.system('python3 help_commands.py')
             return get_command()
 
         elif command == 'exit':
@@ -53,6 +54,10 @@ def execute_command(command):
 
         elif command == 'version':
             print(f'lmsbot version: {version}')
+            get_command()
+
+        elif command == 'config':
+            os.system('wtc-lms config')
             get_command()
 
         elif command == 'login':
@@ -83,7 +88,9 @@ def execute_command(command):
             os.system('project-history')
             get_command()
 
-
+        elif command == 'modules':
+            os.system('wtc-lms modules')
+            get_command()
 
 
 if __name__ == '__main__':
