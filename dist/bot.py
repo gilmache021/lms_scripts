@@ -6,7 +6,6 @@ import os
 from sys import argv
 from time import sleep
 
-from sqlalchemy import true
 
 version = '0.5'
 valid_commands = ['credits', 'help', 'version', 'help', 'exit', 'config', 'login', 'submit', 'review', 'details', 'grade', 'history']
